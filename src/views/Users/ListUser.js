@@ -8,10 +8,6 @@ class ListUser extends React.Component {
         listUsers: [],
     };
     async componentDidMount() {
-        // axios.get('https://reqres.in/api/users?page=2').then((res) => {
-        //     console.log('Check response: ', res.data.data);
-        // });
-        // cần dùng async await ở đây vì cần lấy dữ liệu nên mất thời gian nên cần xử lí sau (xử lí bất đồng bộ)
         let res = await axios.get('https://reqres.in/api/users?page=2');
         console.log('Check response: ', res.data.data);
         this.setState({ listUsers: res && res.data && res.data.data ? res.data.data : [] });

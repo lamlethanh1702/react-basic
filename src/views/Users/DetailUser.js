@@ -20,7 +20,6 @@ class DetailUser extends React.Component {
     render() {
         let { user } = this.state;
         let isEmptyObj = Object.keys(user).length === 0;
-        // Để có thể bik có những attribute nào thì vô devtools console coi
         return (
             <>
                 <div>hello world from detail user with id: {this.props.match.params.id}</div>;
